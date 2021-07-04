@@ -86,7 +86,7 @@ npx tailwindcss init -p
 ```sh
 npx tailwindcss-cli build css/tailwind.css -o build/tailwind.css
 ```
-You can follow above instructions watching [tailwind setup video](https://tailwindcss.com/course/setting-up-tailwind-and-postcss).
+You can follow above instructions watching [tailwind setup video](https://www.youtube.com/watch?v=qYgogv4R8zg).
 
 
 ## Linking to html
