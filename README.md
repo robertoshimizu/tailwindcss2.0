@@ -8,7 +8,7 @@
     </a>        
 </h1>
 
-# TailwindCSS 2.0
+# Tailwindcss 2.0
 
 ### The most basic and quick way to start using tailwind is via CDN
 
@@ -47,24 +47,36 @@ Together with autoprefixer, the build will replace all css custom markers with t
 cd <project folder>
 yarn init
 ```
-- **Install tailwindcss, postcss-cli and autoprefixer.** Basic components to start with.
+- **Install tailwindcss, postcss, autoprefixer.** Basic components to start with. Notice we are also adding [Vite](https://vitejs.dev/).
 ```sh
-yarn add tailwindcss postcss-cli autoprefixer
+yarn add -D tailwindcss postcss autoprefixer vite
 ```
-- **Create tailwind.config.js.** It creates an empty config file, that will be used to customize tailwind it later on.
-```sh
-npx tailwind init
-```
-- **Create postcss.config.js.** This file specifies plugins to be used in postcss. Create the file `postcss.config.js` at the root of the project and add:
-```javascript
-module.exports = {
-    plugins:[
-        require('tailwindcss'),
-        require('autoprefixer'),
-    ]
+- **Add Vite in the script in package.json.**
+```json
+{
+  "name": "tailwindcss2.0",
+  "version": "1.0.0",
+  "description": "tailwindcss 2.0 base project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4",
+    "vite": "^2.3.8"
+  }
 }
 ```
-- **Create the tailwind.css file.** Create `tailwind.css` in the css folder.
+
+- **Create tailwind.config.js.** It creates `tailwind.config.js` and `postcss.config.js` files, that will be used to customize tailwind it later on.
+```sh
+npx tailwindcss init -p
+```
+
+- **Create the tailwind.css file.** Create `tailwind.css` in the css folder, and add the code below:
 ```css
 @tailwind base;
 @tailwind components;
@@ -72,7 +84,7 @@ module.exports = {
 ```
 - **Build the tailwind.css.** Generate a `tailwind.css` file processed by postcss.
 ```sh
-yarn run postcss css/tailwind.css -o public/build/tailwind.css
+npx tailwindcss-cli build css/tailwind.css -o build/tailwind.css
 ```
 You can follow above instructions watching [tailwind setup video](https://tailwindcss.com/course/setting-up-tailwind-and-postcss).
 
@@ -87,14 +99,14 @@ In the public folder, create a new `index.html` file. Scaffold a html template. 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/build/tailwind.css">
+    <link rel="stylesheet" href="/css/tailwind.css">
 </head>
 <body>
     <h1 class="text-4xl font-bold text-center text-blue-500">Hello World! </h1>
 </body>
 </html>
 ```
-Spin a *``Live Server``* and check it out!
+Spin a *``Vite Server``* by running `yarn dev`and check it out!
 
 ## Integrating with Vuejs
 
