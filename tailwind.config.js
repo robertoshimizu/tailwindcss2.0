@@ -5,7 +5,10 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      // extend the ctive to background color for the button
+      backgroundColor: ["active"],
+    },
   },
   plugins: [],
 }
