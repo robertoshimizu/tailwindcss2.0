@@ -4,7 +4,8 @@
   "description": "tailwindcss 2.0 base project",
   "main": "index.js",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vite build"
   },
   "repository": "https://github.com/robertoshimizu/tailwindcss2.0.git",
   "author": "Roberto Shimizu <rshimizubr@gmail.com>",

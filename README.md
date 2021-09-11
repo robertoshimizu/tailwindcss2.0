@@ -106,7 +106,7 @@ In the public folder, create a new `index.html` file. Scaffold a html template. 
 </body>
 </html>
 ```
-Spin a *``Vite Server``* by running `yarn dev`and check it out!
+Spin a *``Vite Server``* by running `yarn dev` and check it out!
 
 ## Integrating with Vuejs
 
